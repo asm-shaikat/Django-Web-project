@@ -1,0 +1,21 @@
+{% extends 'html/base.html' %}
+{%  block title %}Contact{%  endblock title %}
+
+
+{% block body %}
+<div class="d-grid gap-3">
+    <div class="p-2 bg-light border"></div>
+    <div class="p-2 bg-light border"></div>
+    <div class="p-2 bg-light border"></div>
+  </div>
+  <div class="alert alert-primary text-center" role="alert">
+    Request to all visitors,please send some feedback to authors
+  </div>
+  <form action="" method="post">
+      {% csrf_token %}
+      {{ok.as_p}}
+      <input type="submit" value="Submit">
+  </form>
+
+
+{% endblock body %}
